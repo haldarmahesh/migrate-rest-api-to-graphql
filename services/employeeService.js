@@ -1,10 +1,9 @@
 var employeeRepository = require('../repository/employees');
-function getAll(req, res, next) {
-    return res.json(employeeRepository.getAll());
+function getAll() {
+    return employeeRepository.getAll();
 }
-function save(req, res, next) {
-    var newEmployee = req.body;
-    return res.json(employeeRepository.save(newEmployee));
+function save(newEmployee) {
+    return employeeRepository.save(newEmployee);
 }
 
 module.exports = {
