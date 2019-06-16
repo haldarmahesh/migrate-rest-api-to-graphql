@@ -37,7 +37,7 @@ function deleteById(employeeId) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
   }
   employeesData = employeesData.filter(item => item.id !== employeeId);
-  return { deletedId: employeeId };
+  return { id: employeeId };
 }
 
 module.exports = {
