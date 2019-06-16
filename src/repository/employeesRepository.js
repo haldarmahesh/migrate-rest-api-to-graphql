@@ -16,7 +16,9 @@ function getAll() {
 function save(employee) {
   validateEmployee(employee);
   const newEmployee = employee;
-  newEmployee.id = employeesData[employeesData.length - 1].id + 1;
+  const lastEmployee = employeesData[employeesData.length - 1] || { id: 0 };
+  const lastEmployeeId = lastEmployee.id;
+  newEmployee.id = lastEmployeeId + 1;
   employeesData.push(employee);
   return employee;
 }
