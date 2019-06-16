@@ -16,5 +16,10 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
   }
 }
