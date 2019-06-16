@@ -20,15 +20,13 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use((err, req, res) => {
-  console.log(err);
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
+app.use((err, req, res, next) => {
+  if (!err) {
+    return next();
+  }
   res.status(err.status || 500);
-  res.render('error');
+  res.send({ message: err.message });
+  return res;
 });
 
 module.exports = app;

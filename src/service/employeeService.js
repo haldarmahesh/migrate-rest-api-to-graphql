@@ -1,4 +1,4 @@
-const employeeRepository = require('../repository/employees');
+const employeeRepository = require('../repository/employeesRepository');
 
 function getAll() {
   return employeeRepository.getAll();
@@ -6,8 +6,12 @@ function getAll() {
 function save(newEmployee) {
   return employeeRepository.save(newEmployee);
 }
+function getById(employeeId) {
+  return employeeRepository.getById(employeeId);
+}
 
 module.exports = {
   getAll,
+  getById,
   save,
 };
