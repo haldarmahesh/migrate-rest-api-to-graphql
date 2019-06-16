@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexController);
-app.use('/employees', employeesController);
+app.use('/api/employees', employeesController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

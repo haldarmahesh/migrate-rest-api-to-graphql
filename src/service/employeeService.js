@@ -11,12 +11,12 @@ function save(newEmployee) {
 
 // get employee by id
 function getById(employeeId) {
-  return employeeRepository.getById(employeeId);
+  return employeeRepository.getById(parseInt(employeeId, 10));
 }
 
 // delete employee by id
 function deleteById(employeeId) {
-  return employeeRepository.deleteById(employeeId);
+  return employeeRepository.deleteById(parseInt(employeeId, 10));
 }
 
 module.exports = {

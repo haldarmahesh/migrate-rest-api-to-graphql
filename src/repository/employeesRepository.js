@@ -1,5 +1,5 @@
 let employeesData = [{
-  id: 'EMP_1',
+  id: 1,
   name: 'Mahesh',
   department: 'IT',
 }];
@@ -16,13 +16,14 @@ function getAll() {
 function save(employee) {
   validateEmployee(employee);
   const newEmployee = employee;
-  newEmployee.id = `EMP_${employeesData.length + 1}`;
+  newEmployee.id = employeesData[employeesData.length - 1].id + 1;
   employeesData.push(employee);
   return employee;
 }
 
 // get employee by id
 function getById(employeeId) {
+  console.log(employeeId, typeof employeeId);
   const employee = employeesData.filter(item => item.id === employeeId);
   if (employee.length === 0) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
@@ -37,7 +38,7 @@ function deleteById(employeeId) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
   }
   employeesData = employeesData.filter(item => item.id !== employeeId);
-  return employeeId;
+  return { deletedId: employeeId };
 }
 
 module.exports = {
