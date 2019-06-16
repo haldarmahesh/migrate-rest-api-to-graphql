@@ -27,7 +27,7 @@ function getById(employeeId) {
   if (employee.length === 0) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
   }
-  return employee;
+  return employee[0];
 }
 
 // delete employee by id
