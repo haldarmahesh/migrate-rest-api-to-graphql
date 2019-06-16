@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const employeeService = require('../services/employeeService');
+const employeeService = require('../service/employeeService');
 /* GET employees listing. */
 router.get('/', (req, res) => res.json(employeeService.getAll()));
 // router.get('/:id', employeeService.ge)
