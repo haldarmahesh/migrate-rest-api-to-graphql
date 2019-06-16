@@ -10,10 +10,12 @@ function validateEmployee(employee) {
 }
 // get all employee
 function getAll() {
+  console.log('REpo SAVE', employeesData);
   return employeesData;
 }
 // save a new employee
 function save(employee) {
+  console.log('REpo input', employee, employeesData);
   validateEmployee(employee);
   const newEmployee = employee;
   const lastEmployee = employeesData[employeesData.length - 1] || { id: 0 };
@@ -34,6 +36,7 @@ function getById(employeeId) {
 
 // delete employee by id
 function deleteById(employeeId) {
+  console.log('REPO delete', employeeId);
   const employeeIndex = employeesData.findIndex(item => item.id === employeeId);
   if (employeeIndex === -1) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);

@@ -6,16 +6,18 @@ function getAll() {
 
 // save a new employee
 function save(newEmployee) {
+  console.log('Input', newEmployee);
   return employeeRepository.save(newEmployee);
 }
 
 // get employee by id
 function getById(employeeId) {
-  return employeeRepository.getById(parseInt(employeeId, 10));
+  return employeeRepository.getById(employeeId);
 }
 
 // delete employee by id
 function deleteById(employeeId) {
+  console.log('>> DELETING', employeeId, typeof employeeId);
   return employeeRepository.deleteById(parseInt(employeeId, 10));
 }
 
