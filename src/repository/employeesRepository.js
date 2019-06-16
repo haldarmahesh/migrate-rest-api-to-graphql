@@ -1,4 +1,4 @@
-let employeesData = [{
+const employeesData = [{
   id: 1,
   name: 'Mahesh',
   department: 'IT',
@@ -32,11 +32,11 @@ function getById(employeeId) {
 
 // delete employee by id
 function deleteById(employeeId) {
-  const employee = employeesData.filter(item => item.id === employeeId);
-  if (employee.length === 0) {
+  const employeeIndex = employeesData.findIndex(item => item.id === employeeId);
+  if (employeeIndex === -1) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
   }
-  employeesData = employeesData.filter(item => item.id !== employeeId);
+  employeesData.splice(employeeIndex, employeeIndex + 1);
   return { id: employeeId };
 }
 

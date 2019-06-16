@@ -24,6 +24,7 @@ app.use((err, req, res, next) => {
   if (!err) {
     return next();
   }
+  console.err('ERROR', err);
   res.status(err.status || 500);
   res.send({ message: err.message });
   return res;
