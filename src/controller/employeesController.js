@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 /* DELETE /employees/:id - delete an existing employee with id */
 router.delete('/:id', (req, res) => {
   const employeeId = req.params.id;
-  return res.json(employeeService.getById(employeeId)); // todo convert to do
+  return res.json(employeeService.deleteById(employeeId)); // todo convert to do
 });
 
 module.exports = router;
