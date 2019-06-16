@@ -1,5 +1,7 @@
-# Awesome company service
+# Example to migrate from REST API to GraphQL
+
+## Awesome company service
 This services contains APIs to provide employees info and adding new employees.
 
-# Info
+## Info
 The base app structure is generated using express generator.
