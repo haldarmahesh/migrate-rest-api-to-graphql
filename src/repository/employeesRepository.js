@@ -23,7 +23,6 @@ function save(employee) {
 
 // get employee by id
 function getById(employeeId) {
-  console.log(employeeId, typeof employeeId);
   const employee = employeesData.filter(item => item.id === employeeId);
   if (employee.length === 0) {
     throw new Error(`Employee Resource with id: ${employeeId} not found`);
