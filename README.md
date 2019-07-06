@@ -1,4 +1,7 @@
 # Example to migrate from REST API to GraphQL
+This repo is the code base repository for the the blog post [Migrating Existing REST APIs to GraphQL](https://blog.bitsrc.io/migrating-existing-rest-apis-to-graphql-2c5de3db647d).
+
+If you want to know what is exactly is GraphQL, refer [this post](https://blog.bitsrc.io/what-the-duck-is-graphql-6644ec6cbae9).
 
 ## Awesome company service
 This services contains APIs to provide employees info and adding new employees.
