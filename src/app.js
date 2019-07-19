@@ -3,7 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 
 const indexController = require('./controller/indexController');
-const employeesController = require('./controller/employeesController');
+const graphqlController = require('./controller/graphqlController');
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexController);
-app.use('/api/employees', employeesController);
+app.use('/graphql', graphqlController);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
